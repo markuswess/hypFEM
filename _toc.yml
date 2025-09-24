@@ -1,0 +1,13 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: intro
+options: 
+  numbered: 2
+  maxdepth: 2
+chapters: 
+  - file: examples
+    sections: 
+      - file: examples/time_domain_1d
+
