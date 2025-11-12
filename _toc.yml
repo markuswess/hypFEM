@@ -11,4 +11,6 @@ chapters:
     sections: 
       - file: examples/time_domain_1d
       - file: examples/td_2d_2o
+      - file: examples/td_2d_1o
+      - file: examples/td_2d_1o_lumped
 
