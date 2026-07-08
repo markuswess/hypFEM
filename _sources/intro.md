@@ -1,10 +1,10 @@
 # Hyperboloidal compactifications in NGSolve
 
-by *A. Zengino\u{g}lu*,
-Institute for Physical Science and Technology, University of Maryland
+by **A. Zenginoglu**,
+*Institute for Physical Science and Technology, University of Maryland*
 
-and *M. Wess*,
-Institute of Analysis and Scientific Computing, TU Wien 
+and **M. Wess**,
+*Institute of Analysis and Scientific Computing, TU Wien* 
 
 ---
 
@@ -23,7 +23,7 @@ The method admits both time-domain and frequency-domain formulations. In the tim
 
 
 ```{note}
-For a full mathematical exposition to the method we refer to the pre print \ref{wesszenginoglu2026}.
+For a full mathematical exposition to the method we refer to the pre print {cite}`wesszenginoglu2026`.
 ```
 
 
