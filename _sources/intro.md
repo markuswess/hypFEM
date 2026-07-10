@@ -1,10 +1,10 @@
 # Hyperboloidal compactifications in NGSolve
 
-by **A. Zenginoglu**,
-*Institute for Physical Science and Technology, University of Maryland*
-
-and **M. Wess**,
+by **M. Wess**,
 *Institute of Analysis and Scientific Computing, TU Wien* 
+
+and **A. Zenginoglu**,
+*Institute for Physical Science and Technology, University of Maryland*
 
 ---
 
