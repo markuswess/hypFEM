@@ -1,7 +1,9 @@
 jupyter-book==1.0.4.post1
-ghp-import
-sphinx-design
-sphinx-proof
-ngsolve
-numpy
-matplotlib
+ghp-import==2.1.0
+sphinx-design==0.7.0
+sphinx-proof==0.4.0
+ngsolve==6.2.2501
+ngsolve_special_functions==0.1.dev48
+numpy==2.2.4
+matplotlib==3.10.0
+scipy==1.18.0

@@ -1,14 +1,14 @@
-DEPENDS= intro.md _config.yml _toc.yml examples.md references.bib $(wildcard examples/*.ipynb)
+DEPENDS= Makefile $(wildcard *.md) _config.yml _toc.yml references.bib $(wildcard examples/*.ipynb) $(wildcard examples/assets/*)
 .PHONY: all clean full
 
 all: _build/.build-stamp
 
 _build/.build-stamp: $(DEPENDS)
-	jupyter-book build .
+	jupyter-book build . --all
 	touch _build/.build-stamp
 
-full:
-	jupyter-book build --all .
+full: clean
+	jupyter-book build . --all
 	touch _build/.build-stamp
 
 clean:

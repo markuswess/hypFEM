@@ -7,10 +7,20 @@ options:
   numbered: 2
   maxdepth: 2
 chapters: 
+  - file: exterior_scattering
+  - file: far_field_compactification
+  - file: spacetime_picture
+  - file: transformed_operator
+  - file: weak_form_ngsolve
+  - file: limitations
   - file: examples
     sections: 
+      - file: examples/frequency_domain_characteristic_circle
+      - file: examples/frequency_domain_poincare_circle
+      - file: examples/frequency_domain_circle
       - file: examples/frequency_domain_trapping_square
       - file: examples/time_domain_trapping_square
+      - file: examples/time_domain_trapping_square_dg
       #- file: examples/time_domain_1d
       #- file: examples/td_2d_2o
       #- file: examples/td_2d_1o
