@@ -182,7 +182,7 @@ $$
 u\big|_{\rho=1}=U_\infty.
 $$
 
-The numerical unknown is therefore already the slowly varying outgoing radiation field transported along outgoing characteristics to future null infinity. In frequency-domain language this is the standard far-field scaling used by conjugated infinite elements; in spacetime language it follows outgoing radiation along retarded-time characteristics. The characteristic notebook implements this baseline before the layer examples generalize it. It gives a high-accuracy benchmark, although a controlled comparison of compactifications must use the same mesh, polynomial order, quadrature, and linear solver before attributing an error difference to the characteristic choice itself.
+The numerical unknown is therefore already the slowly varying outgoing radiation field transported along outgoing characteristics to future null infinity. In frequency-domain language this is the standard far-field scaling used by conjugated infinite elements; in spacetime language it follows outgoing radiation along retarded-time characteristics. The characteristic notebook implements this baseline before the layer examples generalize it. It gives a high-accuracy benchmark, although an error difference should be attributed to the compactification only after matching the physical problem, polynomial order, near-obstacle resolution, geometry accuracy, quadrature, solver, and computational budget. The compactified meshes themselves need not be identical because their coordinate maps are different.
 
 ## From the Characteristic Baseline to Hyperboloidal Layers
 

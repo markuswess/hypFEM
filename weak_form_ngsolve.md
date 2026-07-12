@@ -92,6 +92,37 @@ Here $\Gamma_\infty$ is the compactified outer boundary. No essential or artific
 
 The outgoing condition is also encoded in the choice of space. An incoming factor produces compactified radial derivatives of order $1/G$ and is not in $H^1(\mathcal D)$ for a standard simple-zero compactification. The $H^1$ trial space therefore excludes the incoming branch. This establishes consistency and boundedness of the displayed form; it should not be confused with a general coercivity or well-posedness theorem for every geometry and wavenumber.
 
+The asymptotic calculation is short. With $h(r)=r+\mathcal O(1)$, an outgoing branch becomes
+
+$$
+\Omega^{-m}e^{-ikh}\left(r^{-m}e^{ikr}U_\infty\right)
+=\mathcal O(1),
+$$
+
+because $r\Omega$ has a finite nonzero limit. The corresponding incoming branch becomes, up to a bounded amplitude,
+
+$$
+u_{\rm in}\sim e^{-2ikr}.
+$$
+
+Since $\partial_\rho r=1/G$,
+
+$$
+\partial_\rho u_{\rm in}\sim-\frac{2ik}{G}e^{-2ikr}.
+$$
+
+For the simple-zero compactifications used here, $G=\mathcal O((S-\rho)^2)$, so this derivative is not square integrable at $\rho=S$. The outgoing branch has a regular trace, while the incoming branch does not belong to the conforming trial space. This is the compactified counterpart of imposing the Sommerfeld condition.
+
+The three groups in the form have distinct numerical roles:
+
+| form | source in the transformation | numerical role |
+| --- | --- | --- |
+| $k^2m$ | residual phase speed $(1-H^2)/G$ | bounded Helmholtz mass term |
+| $ikc$ | time/phase shift $h$ | nonsymmetric radial transport and the outflow trace at $\Gamma_\infty$ |
+| $s$ | compactified spatial metric and conformal weight | anisotropic radial/tangential stiffness plus lower-order rescaling terms |
+
+This grouping should be preserved in the implementation. It also fixes the time-domain signs: with the convention $e^{-ikt}$, the pencil $k^2M+ikC+K_{\rm Helmholtz}$ corresponds to $M\ddot q+C\dot q-K_{\rm Helmholtz}q=f$.
+
 In NGSolve notation this appears as:
 
 ```python

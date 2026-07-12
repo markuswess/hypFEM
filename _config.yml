@@ -11,6 +11,8 @@ only_build_toc_files: true
 execute:
   execute_notebooks: cache
   timeout: 100
+  # A publication build must stop instead of rendering a notebook traceback.
+  raise_on_error: true
 
 # Define the name of the latex output file for PDF builds
 latex:

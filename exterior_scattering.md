@@ -58,3 +58,15 @@ $$
 $$
 
 The numerical solution should therefore give both the near field around $\mathcal O$ and $U_\infty$ at the outer mesh boundary.
+
+For orientation, the main exterior-domain strategies differ in where they place infinity and how they select the outgoing solution:
+
+| method | computational exterior | outgoing condition | access to $U_\infty$ |
+| --- | --- | --- | --- |
+| absorbing boundary condition | truncated at a finite boundary | local approximation on that boundary | postprocessing from finite-radius data |
+| perfectly matched layer | truncated after a complex absorbing layer | decay through coordinate stretching plus an outer termination | postprocessing from the unchanged physical region |
+| Dirichlet-to-Neumann map | truncated at a compatible finite boundary | exact or truncated nonlocal boundary operator | available from the boundary expansion |
+| infinite elements | unbounded elements attached to a finite interface | outgoing asymptotics built into the exterior approximation space | available from exterior expansion coefficients |
+| hyperboloidal compactification | infinity is a finite mesh boundary | incoming fields are excluded by regularity of the transformed unknown | boundary trace of the transformed solution |
+
+This table describes structural differences, not a universal ranking. Accuracy and cost depend on frequency, geometry, discretization, solver, and on how each exterior treatment is tuned. The characteristic construction below is particularly close to conjugated infinite elements; the layer construction turns the same asymptotic normalization into a local finite-domain formulation that is unchanged near the scatterer.
