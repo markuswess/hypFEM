@@ -33,7 +33,7 @@ $$
 \frac{n^2-H^2}{G}.
 $$
 
-With the normalization $H\to1$ used in this book, boundedness requires $n^2-1$ to approach zero at a rate compatible with $G$. Compactly supported variations satisfy this automatically. This is a restriction of the displayed transformation, not of conformal compactification in general: an adapted asymptotic construction can treat variable unbounded media with short- or long-range behavior {cite}`zenginoglu2026penrosemelrose`.
+With the normalization $H\to1$ used in this book, boundedness requires $n^2-1$ to approach zero at a rate compatible with $G$. Compactly supported variations satisfy this automatically. This is a restriction of the displayed transformation, not of conformal compactification in general: an adapted asymptotic construction can treat variable unbounded media with short- or long-range behavior, as developed in [*From Penrose to Melrose*](https://arxiv.org/abs/2601.04167).
 
 ## Restrictions That Are Not Fundamental
 
@@ -55,7 +55,7 @@ The main derivation is scalar and uses conforming $H^1$ elements. The time-domai
 
 ### Variable and long-range media
 
-The simple layer coefficients in this book are tailored to a constant asymptotic wave speed. This does not make long-range media a fundamental limitation. When the asymptotic background operator is sufficiently structured, its modified phase and amplitude can be incorporated into the compactified formulation. The construction in {cite}`zenginoglu2026penrosemelrose` combines conformal compactification with geometric scattering theory to compute scattering amplitudes for constant, short-range, and long-range unbounded media. Extending the present NGSolve layer implementation in that direction is additional work, but the underlying compactification principle remains applicable.
+The simple layer coefficients in this book are tailored to a constant asymptotic wave speed. This does not make long-range media a fundamental limitation. When the asymptotic background operator is sufficiently structured, its modified phase and amplitude can be incorporated into the compactified formulation. The construction in [*From Penrose to Melrose*](https://arxiv.org/abs/2601.04167) combines conformal compactification with geometric scattering theory to compute scattering amplitudes for constant, short-range, and long-range unbounded media. Extending the present NGSolve layer implementation in that direction is additional work, but the underlying compactification principle remains applicable.
 
 ## Structural Limitations and Open Problems
 
@@ -79,7 +79,7 @@ Geometric trapping near an obstacle is not, by itself, a limitation of the compa
 
 ## Analytical Status
 
-The derivation in this book establishes a consistent weak form with bounded coefficients under the stated asymptotic assumptions. It does not provide a complete coercivity, stability, or well-posedness theory for every wavenumber, geometry, material, and discretization. Nor does a regular compactified operator by itself guarantee an efficient large-scale solver. These are separate analytical and numerical questions discussed more fully in the accompanying preprint {cite}`wesszenginoglu2026`.
+The derivation in this book establishes a consistent weak form with bounded coefficients under the stated asymptotic assumptions. It does not provide a complete coercivity, stability, or well-posedness theory for every wavenumber, geometry, material, and discretization. Nor does a regular compactified operator by itself guarantee an efficient large-scale solver. These are separate analytical and numerical questions discussed more fully in the [accompanying Wess--Zenginoğlu preprint](https://arxiv.org/abs/2606.25130).
 
 ## A Practical Applicability Check
 

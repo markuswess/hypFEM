@@ -92,9 +92,9 @@ $$
 u_B=t-r
 $$
 
-is retarded time. Bondi and collaborators used retarded-time coordinates to describe radiation from isolated systems {cite}`bondi1962gravitationalwaves`.
+is retarded time. [Bondi and collaborators](https://doi.org/10.1098/rspa.1962.0161) used retarded-time coordinates to describe radiation from isolated systems.
 
-Penrose supplied the geometric picture underlying the present construction {cite}`penrose1963asymptoticproperties,Penrose1965ZeroRestMass`. One introduces an *unphysical* metric $g$ related to the physical metric $\widetilde g$ by
+Penrose supplied the geometric picture underlying the present construction in his work on [asymptotic properties of spacetime](https://doi.org/10.1103/PhysRevLett.10.66) and [zero rest-mass fields](https://doi.org/10.1098/rspa.1965.0058). One introduces an *unphysical* metric $g$ related to the physical metric $\widetilde g$ by
 
 $$
 g=\Omega^2\widetilde g.
@@ -102,7 +102,7 @@ $$
 
 The conformal factor is positive in the physical spacetime and vanishes at its added boundary, with $d\Omega\ne0$ there. Physical infinity is therefore represented by an ordinary finite boundary of the conformally extended geometry. Future null infinity $\mathscr I^+$ is the component reached by outgoing null rays. The metric rescaling alone is not enough for a wave problem: the radiating field must also be rescaled with its appropriate conformal weight so that it has a regular, nonzero limit at $\mathscr I^+$. In the Helmholtz formulas this is the origin of the factor $\Omega^m$ and of the far field appearing as a boundary trace.
 
-Friedrich turned this conformal viewpoint into a regular hyperbolic evolution framework for Einstein's equations {cite}`friedrich1983cauchy`. His conformal field equations and hyperboloidal initial-value problem demonstrated that suitably rescaled evolution variables can include null infinity in the computational domain without treating it as an artificial outer boundary. The scalar hyperboloidal method used here is far simpler, but it follows the same structural lesson: choose slices that reach $\mathscr I^+$, compactify them, and rescale the field and equations so their coefficients remain regular there.
+[Friedrich](https://doi.org/10.1007/BF01206015) turned this conformal viewpoint into a regular hyperbolic evolution framework for Einstein's equations. His conformal field equations and hyperboloidal initial-value problem demonstrated that suitably rescaled evolution variables can include null infinity in the computational domain without treating it as an artificial outer boundary. The scalar hyperboloidal method used here is far simpler, but it follows the same structural lesson: choose slices that reach $\mathscr I^+$, compactify them, and rescale the field and equations so their coefficients remain regular there.
 
 The compactified Helmholtz method is the frequency-domain version of this picture. We do not place an artificial boundary at a large finite physical radius. Instead, we transform the field so that outgoing radiation has a regular limit at the conformal boundary. The far-field pattern is then a boundary trace at $\mathscr I^+$.
 

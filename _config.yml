@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Hyperboloidal compactification in NGSolve
-author: M. Wess, A. Zenginoglu
+author: M. Wess, A. Zenginoğlu
   # logo: logo.png
 copyright: '2026'
 # Cache notebook execution so unchanged notebooks are not rerun on every build.

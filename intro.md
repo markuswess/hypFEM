@@ -3,7 +3,7 @@
 by **M. Wess**,
 *Institute of Analysis and Scientific Computing, TU Wien* 
 
-and **A. Zenginoglu**,
+and **A. Zenginoğlu**,
 *Institute for Physical Science and Technology, University of Maryland*
 
 ---
@@ -23,7 +23,7 @@ The method admits both time-domain and frequency-domain formulations. In the tim
 
 
 ```{note}
-This book is an executable introduction and implementation companion for readers who already know the finite-element treatment of Helmholtz or wave equations. It records the transformations, assumptions, weak forms, and NGSolve implementation choices needed to reproduce the examples. For the complete derivation, analysis, comparisons with related exterior-domain methods, and broader numerical study, see the preprint {cite}`wesszenginoglu2026`.
+This book is an executable introduction and implementation companion for readers who already know the finite-element treatment of Helmholtz or wave equations. It records the transformations, assumptions, weak forms, and NGSolve implementation choices needed to reproduce the examples. For the complete derivation, analysis, comparisons with related exterior-domain methods, and broader numerical study, see the [Wess--Zenginoğlu preprint](https://arxiv.org/abs/2606.25130).
 
 The implementation developed here focuses on a homogeneous radiative end and should not be read as a universal treatment of unbounded domains. Homogeneity is not fundamental—adapted conformal constructions can also treat structured long-range media—but waveguides, periodic structures, and other modal ends require substantially different ideas. The {doc}`limitations` chapter separates restrictions of the present implementation from structural open problems.
 ```
@@ -38,7 +38,6 @@ The implementation developed here focuses on a homogeneous radiative end and sho
 
 ---
 
-## References
-```{bibliography}
-:all:
-```
+## Reference
+
+M. Wess and A. Zenginoğlu, [*Finite Elements for Helmholtz Scattering with Infinity as a Computational Boundary*](https://arxiv.org/abs/2606.25130), arXiv:2606.25130 (2026).

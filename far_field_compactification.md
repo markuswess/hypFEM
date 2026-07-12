@@ -79,7 +79,7 @@ $$
 U=r^{-m}e^{ikr}u_{\rm char}
 $$
 
-is standard in methods that build the outgoing asymptotics into an exterior approximation space. In particular, conjugated infinite elements extract the same leading spherical decay and phase before approximating the remaining amplitude {cite}`Gerdes1998ConjugatedIE,Astley2000IEReview`. The characteristic compactification in this book starts from this familiar normalization and maps the infinite radial interval to a finite one. Infinity then becomes an actual mesh boundary on which $u_{\rm char}=U_\infty$.
+is standard in methods that build the outgoing asymptotics into an exterior approximation space. In particular, conjugated infinite elements extract the same leading spherical decay and phase before approximating the remaining amplitude; see [Gerdes](https://doi.org/10.1016/S0045-7825(97)00186-2) and [Astley's review](https://doi.org/10.1002/1097-0207(20001110)49:7%3C951::AID-NME989%3E3.0.CO;2-T). The characteristic compactification in this book starts from this familiar normalization and maps the infinite radial interval to a finite one. Infinity then becomes an actual mesh boundary on which $u_{\rm char}=U_\infty$.
 
 This exact scaling is the clean reference case, but applying it globally is not always the most convenient construction for a general obstacle. The layer method keeps the coordinates and unknown unchanged near the scatterer and asks only that the transformation approach the characteristic scaling asymptotically. The height function introduced below provides precisely this freedom.
 

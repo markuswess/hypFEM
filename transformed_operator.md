@@ -35,7 +35,7 @@ $$
 M(\rho)=\frac{n^2-H^2}{G}.
 $$
 
-The regularity requirement is that $M$ remains bounded at the compactified boundary. For the phase and rescaling used here, the variable-index case requires $n^2-H^2=\mathcal O(G)$. More general short- and long-range backgrounds can be treated by adapting the asymptotic phase and rescaling to the background operator {cite}`zenginoglu2026penrosemelrose`; they should not be inserted unchanged into this particular coefficient formula. Pure spatial compactification of the oscillatory Helmholtz field has $H=0$ and $M=1/G$, so it fails this requirement.
+The regularity requirement is that $M$ remains bounded at the compactified boundary. For the phase and rescaling used here, the variable-index case requires $n^2-H^2=\mathcal O(G)$. More general short- and long-range backgrounds can be treated by adapting the asymptotic phase and rescaling to the background operator, as developed in [*From Penrose to Melrose*](https://arxiv.org/abs/2601.04167); they should not be inserted unchanged into this particular coefficient formula. Pure spatial compactification of the oscillatory Helmholtz field has $H=0$ and $M=1/G$, so it fails this requirement.
 
 ## Cartesian Compactified Form
 
@@ -69,4 +69,4 @@ The examples in this book use three related choices:
 | Poincaré disk | $\Omega=(1-\rho^2)/2$ | $H=2\rho/(1+\rho^2)$ |
 | characteristic disk | $\Omega=1-\rho$ | $H=1$ |
 
-All three choices implement the same principle: compactify the far-field amplitude, not the original oscillatory field. The characteristic notebook introduces its additional bounded factor $\rho^m$ locally. For the full derivation see {cite}`wesszenginoglu2026`.
+All three choices implement the same principle: compactify the far-field amplitude, not the original oscillatory field. The characteristic notebook introduces its additional bounded factor $\rho^m$ locally. For the full derivation see the [Wess--Zenginoğlu preprint](https://arxiv.org/abs/2606.25130).
