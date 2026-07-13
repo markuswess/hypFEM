@@ -23,7 +23,7 @@ H=\frac{dh}{dr},
 M=\frac{1-H^2}{G}.
 $$
 
-For the constant-index exterior problem, regularity at the compactified boundary $\rho=S$ requires
+Remember that $\Omega>0$ in the interior and $\Omega=0$ on the boundary, which we map to  $\rho=S$. For the constant-index exterior problem, regularity at the compactified boundary requires
 
 $$
 H(S)=1,
@@ -45,7 +45,7 @@ Q=\frac{XX^T}{\rho^2},
 P=I-Q.
 $$
 
-The compactified spatial coefficient is $GQ+LP$: radial derivatives degenerate with $G\to0$; the angular coefficient $L$ remains bounded. The notebooks use the following choices:
+The compactified spatial coefficient is $GQ+LP$: radial derivatives degenerate with $G\to0$; the angular coefficient $L$ remains bounded. Some choices for $\Omega$ and $H$ used in the notebooks are below:
 
 | example | compactification | phase derivative |
 | --- | --- | --- |
@@ -122,8 +122,8 @@ In NGSolve notation this appears as:
 
 ```python
 radial = CF((x, y))
-Pi = OuterProduct(radial, radial) / rho**2
-Pi_perp = Id(2) - Pi
+Q = OuterProduct(radial, radial) / rho**2
+P = Id(2) - Q
 
 mass = M * u * v * dx(...)
 
@@ -134,7 +134,7 @@ transport = (
 )
 
 stiffness = (
-    -grad(u) * ((G * Pi + L * Pi_perp) * grad(v)) * dx(...)
+    -grad(u) * ((G * Q + L * P) * grad(v)) * dx(...)
     - Omega / L / (2 * rho) * DOmega
       * InnerProduct(grad(u), radial) * v * dx(...)
     - Omega / L / (2 * rho) * DOmega
@@ -145,7 +145,7 @@ stiffness = (
 A = BilinearForm(k**2 * mass + 1j * k * transport + stiffness).Assemble().mat
 ```
 
-Some notebooks call the outer boundary `"outer"` rather than `"scri"`. The role is the same: it is the finite mesh boundary representing infinity.
+Some notebooks call the outer boundary `"outer"` rather than `"scri"`. The role is the same: it's the finite mesh boundary representing infinity.
 
 ## Boundary Data
 

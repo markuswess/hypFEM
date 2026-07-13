@@ -1,7 +1,7 @@
 (far-field-compactification)=
 # Compactifying the Far Field
 
-A direct compactification of the physical Helmholtz field is not useful. The reason is familiar to anyone who has solved high-frequency Helmholtz problems: oscillations matter.
+The unknown $U(r,\omega)$ oscillates infinitely many times on an infinite domain. Therefore, a direct compactification of the Helmholtz equation doesn't work. It simply translates the infinite domain problem into an infinite resolution problem.
 
 Consider the outgoing one-dimensional wave
 
@@ -42,11 +42,13 @@ $$
 +\frac{k^2}{G}U=0.
 $$
 
-The coefficient $k^2/G$ blows up at the compactified boundary. Pure spatial compactification has turned the exterior problem into an infinite-resolution problem.
+The coefficient $k^2/G$ blows up at the compactified boundary.
+
+The main quantity of interest in the unbounded-domain problem is the far field. We should therefore be able to compactify a suitable bulk extension of the far-field amplitude.
 
 ## The Far-Field Amplitude
 
-The outgoing solution is not arbitrary near infinity. It has the form
+The outgoing solution near infinity has the form
 
 $$
 U(r,\omega)
@@ -69,49 +71,41 @@ $$
 \lim_{r\to\infty}u(r,\omega)=U_\infty(\omega).
 $$
 
-This is the central frequency-domain idea. We do not compactify the oscillatory physical field. We first remove the outgoing oscillation $e^{ikr}$ and the radiative decay $r^{-m}$, and then compactify the resulting amplitude. The far field becomes the trace of the transformed unknown.
+This scaling is indeed standard in methods that build the outgoing asymptotics into an exterior approximation space. Conjugated infinite elements extract the same leading spherical decay and phase before approximating the remaining amplitude (see reviews [Gerdes](https://doi.org/10.1016/S0045-7825(97)00186-2) and [Astley](https://doi.org/10.1002/1097-0207(20001110)49:7%3C951::AID-NME989%3E3.0.CO;2-T)). It turns out that this scaling corresponds to using characteristic coordinates in the time domain.
 
-## Characteristic Baseline and Infinite Elements
-
-The scaling
+This choice is not always the most convenient one for a general obstacle. It also changes the nature of the wave equation in the time domain. Since the transformation needs to approach the characteristic scaling only asymptotically, we can generalize the phase by introducing a height function $h(r)$ and define the bulk-extended far-field variable through a rescaling like this:
 
 $$
-U=r^{-m}e^{ikr}u_{\rm char}
+u(r,\omega)
+=r^m e^{-ik h(r)}U(r,\omega).
 $$
 
-is standard in methods that build the outgoing asymptotics into an exterior approximation space. In particular, conjugated infinite elements extract the same leading spherical decay and phase before approximating the remaining amplitude; see [Gerdes](https://doi.org/10.1016/S0045-7825(97)00186-2) and [Astley's review](https://doi.org/10.1002/1097-0207(20001110)49:7%3C951::AID-NME989%3E3.0.CO;2-T). The characteristic compactification in this book starts from this familiar normalization and maps the infinite radial interval to a finite one. Infinity then becomes an actual mesh boundary on which $u_{\rm char}=U_\infty$.
+The height function $h(r)$ asymptotically approaches $r$.
 
-This exact scaling is the clean reference case, but applying it globally is not always the most convenient construction for a general obstacle. The layer method keeps the coordinates and unknown unchanged near the scatterer and asks only that the transformation approach the characteristic scaling asymptotically. The height function introduced below provides precisely this freedom.
+This is the central frequency-domain idea, first introduced in the context of black-hole perturbation theory (see [Zenginoğlu](https://arxiv.org/abs/1102.2451)). We don't compactify the oscillatory field. We first remove the outgoing oscillation $e^{ikr}$ and the radiative decay $r^{-m}$, and then compactify the resulting bulk extension of the far field. The far-field is then obtained directly as the trace of the transformed unknown.
 
-## Generalized Bulk Extension
+## Bulk Extension of the Far Field
 
-For computations it is useful to allow more flexible transformations. We write
+It's useful to allow more flexible transformations that combine the phase scaling (which corresponds to a time transformation), the amplitude scaling (which corresponds to a conformal transformation), and the spatial compactification. For the spatial compactification, we write
 
 $$
 r=\frac{\rho}{\Omega(\rho)},
 $$
 
-where $\Omega>0$ in the computational interior and $\Omega=0$ at the compactified boundary. We also replace the phase $r$ by a phase function $h(r)$. The transformed unknown $u$ is defined by
-
-$$
-U(r(\rho),\omega)
-=\Omega(\rho)^m e^{ikh(r(\rho))}u(\rho,\omega).
-$$
-
-Equivalently,
+where $\Omega>0$ in the computational interior and $\Omega=0$ at the compactified boundary. We define the transformed unknown $u$ by
 
 $$
 u(\rho,\omega)
 =\Omega(\rho)^{-m}e^{-ikh(r(\rho))}U(r(\rho),\omega).
 $$
 
-If the compactified boundary is $\rho=S$, then $r=\rho/\Omega$ implies the normalization
+If the compactified boundary is at $\rho=S$, then $r=\rho/\Omega$ implies
 
 $$
 \lim_{r\to\infty}r\Omega=S.
 $$
 
-For the constant-coefficient outgoing phase used here, a definite far-field trace additionally requires
+As mentioned above, the height function $h(r)$ should asymptotically approach $r$:
 
 $$
 h(r)=r+h_0+o(1),
@@ -125,8 +119,6 @@ u\big|_{\rho=S}
 =S^{-m}e^{-ikh_0}U_\infty.
 $$
 
-Thus $u$ is a regular finite-element unknown and its boundary trace gives the far field through a known constant.
+Thus $u$ is a regular unknown and its boundary trace gives the far field through a known constant.
 
-The characteristic disk example later introduces the bounded rescaling $u_{\rm char}=\rho^m u$. Because its special choice is $h=r$, this recovers the exact spherical amplitude above and simplifies the strong form. This extra factor is not needed for the layer or Poincaré weak-form examples.
-
-This is the practitioner-facing entry point to hyperboloidal compactification in the frequency domain. The spacetime interpretation explains where $\Omega$ and $h$ come from geometrically, but the finite-element method can first be understood as a compactification of a suitable far-field extension.
+This is the essence of hyperboloidal compactification in frequency domain. A deeper, geometric understanding of $\Omega$ and $h$ comes from the spacetime interpretation, but the finite-element method can first be understood as a compactification of a suitable bulk extension of the far field.
