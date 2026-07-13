@@ -1,9 +1,9 @@
 (limitations)=
 # Scope and Limitations
 
-Hyperboloidal compactification is not a generic recipe for every problem posed on an unbounded domain. The formulation in this book relies on a particular structure at infinity: outgoing solutions have a sufficiently well understood asymptotic phase and decay, and that behavior can be removed before the radial coordinate is compactified. The examples use a homogeneous radiative end, but homogeneity itself is not a fundamental requirement.
+The main idea behind hyperboloidal compactification is simple: first remove the known oscillation and decay of an outgoing wave, then compactify what remains. This works well when we understand the behavior of the solution far away from the scatterer. It is not meant to be a universal recipe for every equation on an unbounded domain.
 
-For the constant-coefficient Helmholtz equation this structure is
+For the constant-coefficient Helmholtz equation, the relevant behavior is
 
 $$
 U(r,\omega)
@@ -11,84 +11,86 @@ U(r,\omega)
 \qquad r\to\infty.
 $$
 
-The factor $e^{ikr}$ determines the asymptotic height function, the power of $r$ determines the field rescaling, and $U_\infty$ becomes the trace at the compactified boundary. If a problem does not admit an analogous outgoing expansion, the construction presented here does not directly apply.
+The phase $e^{ikr}$ tells us how to choose the height function, the power of $r$ tells us how to rescale the field, and $U_\infty$ becomes the value of the transformed field at the compactified boundary. If a problem has a different structure at infinity, we need to adapt these ingredients. Sometimes that is straightforward; sometimes it leads to a genuinely different problem.
 
-## Assumptions of the Present Formulation
+## What We Assume in This Book
 
-The theory and examples in this book assume the following.
+The examples use a particularly clean setting:
 
-1. **The book uses a homogeneous exterior model.** Outside a bounded physical region, the examples use the constant-coefficient Helmholtz or wave equation. A compactly supported scatterer, cavity, or heterogeneous region is therefore covered directly by the displayed formulas. Variable and long-range media require an asymptotic phase and rescaling adapted to the background operator, rather than the particular coefficients implemented here.
+- The equation is the constant-coefficient Helmholtz or wave equation outside a bounded region. Scatterers, sources, and heterogeneous materials may be complicated, but they are enclosed by the layer interface.
+- Radiation is asymptotically spherical, with the usual outgoing phase $e^{ikr}$ or retarded time $t-r$.
+- We know the leading phase and decay before constructing the compactification.
+- We solve only for the outgoing scattered field. A prescribed incident wave is separated analytically rather than entering through the boundary at infinity.
+- The layer is placed outside the physical structure, where the asymptotic description is already valid.
 
-2. **Radiation is asymptotically spherical.** The compactification uses a radial coordinate and an outgoing phase determined by $t-r$ or $e^{ikr}$. The computational boundary represents the end reached by those outgoing radial characteristics.
-
-3. **The outgoing asymptotics are known.** The transformation is designed from the leading phase and amplitude. Unknown, direction-dependent, or mode-dependent asymptotics cannot simply be handled by the same coefficients.
-
-4. **The desired solution is outgoing.** Regularity of the compactified unknown excludes the incoming branch. A prescribed incident plane wave is separated analytically and only its outgoing scattered field is solved for. Problems requiring independent data to enter from infinity need a different formulation.
-
-5. **The physical sources and material structure lie inside the uncompactified region.** The layer method is most natural when the scatterer, forcing, and heterogeneous coefficients are enclosed by the layer interface.
-
-For a variable refractive index, the regularity condition illustrates the restriction directly. The transformed coefficient contains
+These assumptions are visible in the coefficient
 
 $$
 \frac{n^2-H^2}{G}.
 $$
 
-With the normalization $H\to1$ used in this book, boundedness requires $n^2-1$ to approach zero at a rate compatible with $G$. Compactly supported variations satisfy this automatically. This is a restriction of the displayed transformation, not of conformal compactification in general: an adapted asymptotic construction can treat variable unbounded media with short- or long-range behavior, as developed in [*From Penrose to Melrose*](https://arxiv.org/abs/2601.04167).
+With the normalization $H\to1$ used here, the displayed formulation is regular when $n^2-1$ approaches zero at a rate compatible with $G$. Compactly supported variations satisfy this automatically. This condition belongs to the particular phase and rescaling used in the notebooks, not to compactification in general.
 
-## Restrictions That Are Not Fundamental
+## What Can Be Changed
 
-Some limitations belong to the implementation developed here rather than to the central idea.
+Several restrictions in the examples are choices of implementation rather than limitations of the method.
 
-### Shape of the compactified boundary
+### The outer boundary need not be a circle
 
-The presented implementations use a circular compactified boundary in two dimensions, with the radial center inside the obstacle. The analogous radial construction can use a sphere in three dimensions, although this book does not include a 3D notebook. More general star-shaped compactified boundaries and nonradial boundary-defining functions are possible in principle. They require a more general coordinate map, tensor coefficients, and a careful treatment of the regularity condition, but the outer boundary need not fundamentally be circular or spherical.
+We use a circular compactified boundary in two dimensions and place its center inside the obstacle. The three-dimensional analogue uses a sphere. More general star-shaped boundaries and nonradial defining functions should also be possible, but they lead to a more complicated coordinate map and tensor coefficients.
 
-This extension would be useful for elongated obstacles, because a large enclosing circle or sphere can waste degrees of freedom in directions where little physical space is needed.
+This can matter for elongated geometries, where a large enclosing circle or sphere may spend many degrees of freedom in directions that do not need them.
 
-### Obstacle geometry and boundary conditions
+### The obstacle can be quite general
 
-The compactified boundary may be circular or spherical even when the obstacle is not. Smooth, polygonal, nonconvex, off-centered, and trapping obstacles can all be placed inside the unchanged physical region. Sound-hard and impedance conditions should likewise be incorporated through their usual physical boundary terms, although the book concentrates on sound-soft scattering.
+The obstacle itself does not need to be circular. It may be polygonal, nonconvex, off-center, or trapping, as long as it lies inside the unchanged physical region. Sound-hard and impedance conditions can be handled through their usual physical boundary terms. We focus on sound-soft scattering only to keep the examples concise.
 
-### Equation and discretization choices
+### Other equations and discretizations are possible
 
-The main derivation is scalar and uses conforming $H^1$ elements. The time-domain DG companion shows that discontinuous spaces are also possible, but require consistent face terms for both the conformal spatial flux and the mixed time-space operator. Extensions to Maxwell systems, elasticity, other finite-element spaces, and other time integrators require new derivations but do not conflict with the basic compactification principle when the exterior radiation structure is known. Similarly, the direct solvers used in the notebooks are convenient for small examples; large computations require appropriate iterative solvers and preconditioners.
+The main frequency-domain implementation uses a scalar equation and conforming $H^1$ elements. The DG example shows that discontinuous spaces are possible as well, provided the face terms respect the conformal spatial flux and the mixed time-space operator.
 
-### Variable and long-range media
+Maxwell equations, elasticity, other finite-element spaces, and other time integrators require their own derivations. The same geometric idea can still be useful whenever the outgoing behavior at infinity is known. Likewise, the direct solvers in the notebooks are convenient at this scale; larger calculations will need suitable iterative solvers and preconditioners.
 
-The simple layer coefficients in this book are tailored to a constant asymptotic wave speed. This does not make long-range media a fundamental limitation. When the asymptotic background operator is sufficiently structured, its modified phase and amplitude can be incorporated into the compactified formulation. The construction in [*From Penrose to Melrose*](https://arxiv.org/abs/2601.04167) combines conformal compactification with geometric scattering theory to compute scattering amplitudes for constant, short-range, and long-range unbounded media. Extending the present NGSolve layer implementation in that direction is additional work, but the underlying compactification principle remains applicable.
+### Long-range media are not excluded
 
-## Structural Limitations and Open Problems
+The layer coefficients implemented here assume a constant asymptotic wave speed, but long-range behavior is not a fundamental obstruction. If the background operator has a structured asymptotic phase and amplitude, these can be built into the transformation. [*From Penrose to Melrose*](https://arxiv.org/abs/2601.04167) develops this idea for constant, short-range, and long-range unbounded media.
 
-Other unbounded-domain problems have a genuinely different structure at infinity. The current method should not be assumed to cover them.
+Bringing that construction into the present NGSolve layer would require additional work, but it would still follow the same principle: remove the correct far-field behavior before compactifying.
 
-### Waveguides and domains with cylindrical ends
+## Where the Present Method Does Not Directly Fit
 
-Radiation in a waveguide is described by guided, propagating, evanescent, and possibly threshold modes. The outgoing phase depends on the transverse mode rather than on a single spherical factor $e^{ikr}$, and the domain has one or more cylindrical ends instead of one spherical radiative end. It is not presently clear how to represent all of these modes by a single local hyperboloidal rescaling and one compactified boundary. A successful extension would probably need a mode-adapted compactification and a corresponding radiation space.
+Some unbounded-domain problems organize radiation in a different way. The formulas in this book should not simply be copied to those settings.
 
-### Periodic and locally periodic structures
+### Waveguides and cylindrical ends
 
-Periodic gratings and photonic structures are naturally described through Bloch--Floquet modes, diffraction orders, and radiation conditions tied to a periodic cell. Their asymptotic behavior is not the spherical far-field expansion used here. Wood anomalies and grazing modes add further complications. Combining hyperboloidal ideas with periodic radiation conditions is an open direction, not an application justified by the present formulation.
+A waveguide carries propagating, evanescent, guided, and sometimes threshold modes. Each transverse mode has its own longitudinal phase, so there is no single spherical factor $e^{ikr}$ to remove. It is not clear how all of these channels could be represented by one local rescaling and one compactified boundary. A useful extension would probably need a mode-dependent construction and a corresponding radiation space.
 
-### Anisotropic propagation and multiple asymptotic ends
+### Periodic structures
 
-In anisotropic or moving media, rays need not approach radial null characteristics and may have direction-dependent speeds. Domains with several geometrically distinct ends can carry different radiation channels. Such problems may require separate compactifications, phase functions derived from an eikonal equation, or nonlocal modal radiation conditions. Caustics or mode conversion may prevent a single smooth global phase from being adequate.
+Periodic gratings and photonic structures are naturally described by Bloch--Floquet modes and diffraction orders. Their radiation condition belongs to a periodic cell rather than to a spherical end. Grazing modes and Wood anomalies make the situation even more delicate. Hyperboloidal ideas may still have a role, but the formulation in this book does not cover these problems.
 
-## What Trapping Does and Does Not Change
+### Anisotropic media and several different ends
 
-Geometric trapping near an obstacle is not, by itself, a limitation of the compactification. The trapping-square examples have a homogeneous exterior and a standard outgoing far field, so the exterior transformation remains applicable. Trapping can nevertheless make the Helmholtz system poorly conditioned near resonances and can produce long-lived time-domain signals. Hyperboloidal compactification treats the exterior boundary; it does not remove the intrinsic analytical or numerical difficulty caused by trapping.
+In an anisotropic or moving medium, rays need not approach radial characteristics and their speeds may depend on direction. A domain may also have several ends carrying different radiation channels. Such problems may require several compactifications or phase functions obtained from an eikonal equation. Caustics and mode conversion can prevent a single smooth global phase from working everywhere.
 
-## Analytical Status
+## A Note about Trapping
 
-The derivation in this book establishes a consistent weak form with bounded coefficients under the stated asymptotic assumptions. It does not provide a complete coercivity, stability, or well-posedness theory for every wavenumber, geometry, material, and discretization. Nor does a regular compactified operator by itself guarantee an efficient large-scale solver. These are separate analytical and numerical questions discussed more fully in the [accompanying Wess--Zenginoğlu preprint](https://arxiv.org/abs/2606.25130).
+Trapping near an obstacle does not prevent us from compactifying the exterior. The trapping-square examples still have a homogeneous far field with standard outgoing behavior.
 
-## A Practical Applicability Check
+What compactification does *not* do is remove the difficulty caused by trapping itself. Near resonances, the Helmholtz system can become poorly conditioned, and in the time domain the trapped signal can persist for a long time. Hyperboloidal compactification treats the unbounded exterior; it does not make the interior dynamics easier.
 
-Before applying the method to a new unbounded-domain problem, ask:
+## What Is Established Here
 
-1. Does the equation have a sufficiently structured asymptotic form?
-2. Is there a well-defined outgoing asymptotic expansion?
-3. Can its leading phase and decay be removed by a known local transformation?
-4. Does the rescaled solution have a regular finite-energy trace at the proposed compactified boundary?
-5. Do all transformed coefficients remain bounded there?
+The book gives a consistent weak form with bounded coefficients under the assumptions above and demonstrates that it can be implemented directly in NGSolve. It does not attempt a general proof of coercivity, stability, or well-posedness for every geometry, material, and wavenumber. A regular compactified operator also does not automatically provide an efficient solver at large scale. The accompanying [Wess--Zenginoğlu preprint](https://arxiv.org/abs/2606.25130) discusses the analysis and numerical evidence in more detail.
 
-If the answer to these questions is yes, a hyperboloidal layer may be a natural formulation. If the asymptotic end is modal, periodic, or otherwise lacks a usable radiative phase and rescaling, a different exterior method—or a genuinely new hyperboloidal construction—is required.
+## A Quick Check for New Problems
+
+Before using the method on a new problem, it helps to ask:
+
+1. Do I know the outgoing behavior of the solution at infinity?
+2. Can I remove its leading phase and decay with a known transformation?
+3. Does the transformed field have a regular trace at the compactified boundary?
+4. Do the transformed coefficients stay bounded there?
+5. Is the end spherical or ray-like, rather than modal or periodic?
+
+If the answers are yes, a hyperboloidal layer is a natural option to try. If the far field is organized into waveguide modes, Bloch modes, or several unrelated radiation channels, the problem needs a different exterior treatment or a new compactification designed for that structure.
