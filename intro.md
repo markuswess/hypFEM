@@ -1,4 +1,4 @@
-# Hyperboloidal compactification in NGSolve
+# Hyperboloidal Compactification in NGSolve
 
 by **M. Wess**,
 *Institute of Analysis and Scientific Computing, TU Wien*
@@ -31,7 +31,7 @@ The book also includes time-domain examples, which are part of ongoing research 
 
 ---
 
-## Table of Contents
+## Table of contents
 ```{tableofcontents}
 ```
 

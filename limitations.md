@@ -62,7 +62,7 @@ In an anisotropic or moving medium, rays don't approach radial characteristics a
 
 We don't have a general proof of coercivity, stability, or well-posedness for every geometry, material, and wavenumber. Also, a regular compactified operator does not automatically provide an efficient solver at large scale. Such questions require further analysis of the transformed operator and its discretization. The method is supported by its widespread application in numerical relativity and by the practical experiments in these notebooks, but this numerical evidence is not a substitute for analysis.
 
-## A Quick Check for New Problems
+## A quick check for new problems
 
 Before using the method on a new problem, it helps to ask:
 

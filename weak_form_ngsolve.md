@@ -147,7 +147,7 @@ A = BilinearForm(k**2 * mass + 1j * k * transport + stiffness).Assemble().mat
 
 Some notebooks call the outer boundary `"outer"` rather than `"scri"`. The role is the same: it's the finite mesh boundary representing infinity.
 
-## Boundary Data
+## Boundary data
 
 For a sound-soft obstacle, the physical scattered field satisfies
 

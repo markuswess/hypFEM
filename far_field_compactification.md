@@ -46,7 +46,7 @@ The coefficient $k^2/G$ blows up at the compactified boundary.
 
 The main quantity of interest in the unbounded-domain problem is the far field. We should therefore be able to compactify a suitable bulk extension of the far-field amplitude.
 
-## The Far-Field Amplitude
+## The far-field amplitude
 
 The outgoing solution near infinity has the form
 
@@ -84,7 +84,7 @@ The height function $h(r)$ asymptotically approaches $r$.
 
 This is the central frequency-domain idea, first introduced in the context of black-hole perturbation theory (see [Zenginoğlu](https://arxiv.org/abs/1102.2451)). We don't compactify the oscillatory field. We first remove the outgoing oscillation $e^{ikr}$ and the radiative decay $r^{-m}$, and then compactify the resulting bulk extension of the far field. The far-field is then obtained directly as the trace of the transformed unknown.
 
-## Bulk Extension of the Far Field
+## Bulk extension of the far field
 
 It's useful to allow more flexible transformations that combine the phase scaling (which corresponds to a time transformation), the amplitude scaling (which corresponds to a conformal transformation), and the spatial compactification. For the spatial compactification, we write
 

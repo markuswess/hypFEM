@@ -25,7 +25,7 @@ $$
 
 So we can consider the frequency-domain solution as the spatial part of a time-periodic wave. And here comes the connection to time transformations.
 
-## Time Transformation
+## Time transformation
 
 Introduce a new time coordinate $\tau$ using a height function $h(r)$ that only depends on the radius:
 
@@ -45,7 +45,7 @@ $$
 The highlighted quantity is the phase-transformed Helmholtz field. The regular unknown $u$ used in the rest of the book also includes the conformal factor introduced below. Thus a complex exponential scaling of the Helmholtz unknown is equivalent to a time transformation in the wave equation. That's the connection. To understand where the rest of the transformations come from, we must include a few pointers to mathematical relativity.
 
 (conformal-infinity)=
-## Conformal Infinity
+## Conformal infinity
 
 What we're doing in this method is to map infinity to the finite boundary of a computational domain. This is the same idea as the conformal compactification used in relativity. The method goes back to the concept of conformal infinity introduced by Penrose in 1963 in his work on [asymptotic properties of spacetime](https://doi.org/10.1103/PhysRevLett.10.66). Penrose demonstrated that infinity in relativity has a geometric structure inherited from the causal structure of spacetime. We have infinity along timelike directions, along spacelike directions, and along null directions. The latter is the relevant one for radiation problems because outgoing (scattered) waves propagate along characteristics to null infinity. Since the causal structure is preserved by conformal rescalings, Penrose could replace asymptotic analysis at infinity by local analysis at the conformal boundary where the conformal factor vanishes. The conformal boundary where outgoing radiation propagates to is called *future null infinity* and denoted by $\mathscr I^+$.
 
