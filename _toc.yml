@@ -10,7 +10,6 @@ chapters:
   - file: exterior_scattering
   - file: far_field_compactification
   - file: spacetime_picture
-  - file: transformed_operator
   - file: weak_form_ngsolve
   - file: limitations
   - file: examples
