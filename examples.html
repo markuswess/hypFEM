@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>1. Examples &#8212; Hyperboloidal compactification in NGSolve</title>
+    <title>6. Examples &#8212; Hyperboloidal compactification in NGSolve</title>
   
   
   
@@ -34,9 +34,9 @@
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=3c74b3bc" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=9c3e77be" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css?v=8cd3d715" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/proof.css?v=8c6b312c" />
+    <link rel="stylesheet" type="text/css" href="_static/proof.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- So that users can add custom icons -->
@@ -61,11 +61,13 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'examples';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1.1. Frequency Domain: Trapping Square" href="examples/frequency_domain_trapping_square.html" />
-    <link rel="prev" title="Hyperboloidal compactifications in NGSolve" href="intro.html" />
+    <link rel="next" title="Frequency Domain: Characteristic Compactification of a Sound-Soft Circle" href="examples/frequency_domain_characteristic_circle.html" />
+    <link rel="prev" title="5. Limitations" href="limitations.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -159,14 +161,23 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Hyperboloidal compactifications in NGSolve
+                    Hyperboloidal compactification in NGSolve
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">1. Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="examples/frequency_domain_trapping_square.html">1.1. Frequency Domain: Trapping Square</a></li>
-<li class="toctree-l2"><a class="reference internal" href="examples/time_domain_trapping_square.html">1.2. Time-domain: Trapping Square</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exterior_scattering.html">1. Exterior Scattering Problem</a></li>
+<li class="toctree-l1"><a class="reference internal" href="far_field_compactification.html">2. Compactifying the Far Field</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spacetime_picture.html">3. Spacetime Picture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="weak_form_ngsolve.html">4. Weak Form Used in NGSolve</a></li>
+<li class="toctree-l1"><a class="reference internal" href="limitations.html">5. Limitations</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">6. Examples</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="examples/frequency_domain_characteristic_circle.html">Frequency Domain: Characteristic Compactification of a Sound-Soft Circle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/frequency_domain_poincare_circle.html">Frequency Domain: Poincaré Compactification of a Sound-Soft Circle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/frequency_domain_circle.html">Frequency Domain: Sound-Soft Circle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/frequency_domain_trapping_square.html">Frequency Domain: Trapping Square</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/time_domain_trapping_square.html">Time Domain: Driven Trapping Square</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/time_domain_trapping_square_dg.html">Time Domain: Trapping Square with Discontinuous Galerkin</a></li>
 </ul>
 </details></li>
 </ul>
@@ -338,7 +349,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm pst-navbar-icon" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -354,6 +367,15 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-circle-benchmark">6.1. Common Circle Benchmark</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-and-dg-examples">6.2. Time-domain and DG examples</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -364,13 +386,93 @@
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="examples">
-<span id="id1"></span><h1><span class="section-number">1. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h1>
+<span id="id1"></span><h1><span class="section-number">6. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h1>
+<p>We start with three implementations of sound-soft circle scattering: the characteristic scaling, Poincaré disk, and the hyperboloidal layer. The characteristic circle is the compactified analogue of the standard far-field scaling used by conjugated infinite elements. The Poincaré circle solves the Helmholtz equation in the hyperbolic geometry. The layer example shows how to preserve standard representation near the obstacle and transform only the exterior.</p>
+<section id="common-circle-benchmark">
+<span id="circle-benchmark"></span><h2><span class="section-number">6.1. </span>Common Circle Benchmark<a class="headerlink" href="#common-circle-benchmark" title="Link to this heading">#</a></h2>
+<p>The three circle notebooks change the compactification but keep the physical problem fixed. The obstacle is the unit disk, <span class="math notranslate nohighlight">\(k=6\)</span>, and the incident direction is <span class="math notranslate nohighlight">\(a=(1,0)\)</span>. Following the notation of <a class="reference internal" href="exterior_scattering.html#exterior-scattering"><span class="std std-ref">Exterior Scattering Problem</span></a>, <span class="math notranslate nohighlight">\(U^{\rm inc}=e^{ikx}\)</span> is the incident field, <span class="math notranslate nohighlight">\(U\)</span> is the outgoing scattered field, <span class="math notranslate nohighlight">\(U^{\rm tot}=U^{\rm inc}+U\)</span> is the total field, and <span class="math notranslate nohighlight">\(U_\infty\)</span> is the far-field pattern. Lowercase <span class="math notranslate nohighlight">\(u\)</span> is reserved for a transformed finite-element unknown; the characteristic normalization is distinguished as <span class="math notranslate nohighlight">\(u_{\rm char}\)</span>.</p>
+<p>The notebooks use as reference the truncated Fourier–Bessel solution,</p>
+<div class="math notranslate nohighlight">
+\[
+U_\infty^{(N)}(\theta)
+=\sqrt{\frac{2}{\pi k}}e^{-i\pi/4}
+\sum_{n=-N}^{N}
+\left(-\frac{J_n(k)}{H_n^{(1)}(k)}\right)e^{in\theta},
+\qquad N=35.
+\]</div>
+<p>What changes between notebooks is the transformed unknown and therefore the normalization that converts its outer trace into <span class="math notranslate nohighlight">\(U_{\infty,h}\)</span>.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>construction</p></th>
+<th class="head"><p>transformed field</p></th>
+<th class="head"><p>data on the obstacle</p></th>
+<th class="head"><p>far-field extraction</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>characteristic disk</p></td>
+<td><p><span class="math notranslate nohighlight">\(U=(\Omega/\rho)^{1/2}e^{ikr}u_{\rm char}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(u_{\rm char}=-r^{1/2}e^{-ikr}U^{\rm inc}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(U_{\infty,h}=\left.u_{\rm char}\right\rvert_{\rho=1}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Poincaré disk</p></td>
+<td><p><span class="math notranslate nohighlight">\(U=\Omega^{1/2}e^{ikh}u\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(u=-\Omega^{-1/2}e^{-ikh}U^{\rm inc}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(U_{\infty,h}=\left.u\right\rvert_{\rho=1}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>hyperboloidal layer</p></td>
+<td><p><span class="math notranslate nohighlight">\(U=\Omega^{1/2}e^{ikh}u\)</span> in the layer and <span class="math notranslate nohighlight">\(u=U\)</span> inside</p></td>
+<td><p><span class="math notranslate nohighlight">\(u=-U^{\rm inc}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(U_{\infty,h}=\sqrt{R_{\rm out}}e^{-ikR_{\rm out}}\left.u\right\rvert_{\rho=R_{\rm out}}\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The two global disk constructions transform the obstacle data because compactification reaches the obstacle. The layer leaves both the coordinates and the scattered field unchanged there. In every case the compactified outer boundary is part of the transformed problem without extra absorbing conditions.</p>
+<p>All three notebooks use polynomial degree <span class="math notranslate nohighlight">\(p=8\)</span> and approximately 8,000 degrees of freedom. The table below summarizes the results.</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>compactification</p></th>
+<th class="head text-right"><p>degrees of freedom</p></th>
+<th class="head text-right"><p>relative far-field <span class="math notranslate nohighlight">\(L^2\)</span> error</p></th>
+<th class="head text-right"><p>setup and solve</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>characteristic</p></td>
+<td class="text-right"><p>8,300</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(4.055\times10^{-8}\)</span></p></td>
+<td class="text-right"><p>0.214 s</p></td>
+</tr>
+<tr class="row-odd"><td><p>Poincaré</p></td>
+<td class="text-right"><p>8,128</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(5.615\times10^{-8}\)</span></p></td>
+<td class="text-right"><p>0.250 s</p></td>
+</tr>
+<tr class="row-even"><td><p>hyperboloidal layer</p></td>
+<td class="text-right"><p>8,712</p></td>
+<td class="text-right"><p><span class="math notranslate nohighlight">\(3.176\times10^{-8}\)</span></p></td>
+<td class="text-right"><p>0.236 s</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The timings are machine-dependent and exclude Python imports and kernel startup. They show that the finite-element work itself is inexpensive at this scale. In the layer notebook, evaluating the explicit Fourier–Bessel near-field reference takes much longer than solving the Helmholtz problem. The three notebooks produce visually indistinguishable results, and the far-field errors are all below <span class="math notranslate nohighlight">\(10^{-7}\)</span>.</p>
+</section>
+<section id="time-domain-and-dg-examples">
+<h2><span class="section-number">6.2. </span>Time-domain and DG examples<a class="headerlink" href="#time-domain-and-dg-examples" title="Link to this heading">#</a></h2>
+<p>The trapping-square notebooks use an open-cavity geometry to show radiation leaving through the compactified layer with trapped energy in the cavity. The frequency-domain notebook centers the cavity, whereas the two time-domain notebooks use a shifted cavity and mesh construction. The DG implementation imposes the sound-soft wall weakly and distinguishes the full conformal spatial flux from the skew skeleton coupling required by the mixed time-space derivative.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="examples/frequency_domain_trapping_square.html">1.1. Frequency Domain: Trapping Square</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples/time_domain_trapping_square.html">1.2. Time-domain: Trapping Square</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/frequency_domain_characteristic_circle.html">Frequency Domain: Characteristic Compactification of a Sound-Soft Circle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/frequency_domain_poincare_circle.html">Frequency Domain: Poincaré Compactification of a Sound-Soft Circle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/frequency_domain_circle.html">Frequency Domain: Sound-Soft Circle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/frequency_domain_trapping_square.html">Frequency Domain: Trapping Square</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/time_domain_trapping_square.html">Time Domain: Driven Trapping Square</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/time_domain_trapping_square_dg.html">Time Domain: Trapping Square with Discontinuous Galerkin</a></li>
 </ul>
 </div>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -404,20 +506,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="intro.html"
+       href="limitations.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Hyperboloidal compactifications in NGSolve</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Limitations</p>
       </div>
     </a>
     <a class="right-next"
-       href="examples/frequency_domain_trapping_square.html"
+       href="examples/frequency_domain_characteristic_circle.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1.1. </span>Frequency Domain: Trapping Square</p>
+        <p class="prev-next-title">Frequency Domain: Characteristic Compactification of a Sound-Soft Circle</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -428,6 +530,24 @@
             
             
               
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item"><div
+    id="pst-page-navigation-heading-2"
+    class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-circle-benchmark">6.1. Common Circle Benchmark</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-and-dg-examples">6.2. Time-domain and DG examples</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
             
           </div>
           <footer class="bd-footer-content">
@@ -437,7 +557,7 @@
   <div class="footer-item">
     
 <p class="component-author">
-By M. Wess, A. Zenginoglu
+By M. Wess, A. Zenginoğlu
 </p>
 
   </div>
@@ -447,7 +567,7 @@ By M. Wess, A. Zenginoglu
 
   <p class="copyright">
     
-      © Copyright 2025.
+      © Copyright 2026.
       <br/>
     
   </p>
