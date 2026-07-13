@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>6. Examples &#8212; Hyperboloidal compactification in NGSolve</title>
+    <title>6. Examples &#8212; Hyperboloidal Compactification in NGSolve</title>
   
   
   
@@ -145,7 +145,7 @@
   
   
   
-    <p class="title logo__title">Hyperboloidal compactification in NGSolve</p>
+    <p class="title logo__title">Hyperboloidal Compactification in NGSolve</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -161,7 +161,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Hyperboloidal compactification in NGSolve
+                    Hyperboloidal Compactification in NGSolve
                 </a>
             </li>
         </ul>
@@ -372,7 +372,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-circle-benchmark">6.1. Common Circle Benchmark</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-circle-benchmark">6.1. Common circle benchmark</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-and-dg-examples">6.2. Time-domain and DG examples</a></li>
 </ul>
             </nav>
@@ -389,7 +389,7 @@
 <span id="id1"></span><h1><span class="section-number">6. </span>Examples<a class="headerlink" href="#examples" title="Link to this heading">#</a></h1>
 <p>We start with three implementations of sound-soft circle scattering: the characteristic scaling, Poincaré disk, and the hyperboloidal layer. The characteristic circle is the compactified analogue of the standard far-field scaling used by conjugated infinite elements. The Poincaré circle solves the Helmholtz equation in the hyperbolic geometry. The layer example shows how to preserve standard representation near the obstacle and transform only the exterior.</p>
 <section id="common-circle-benchmark">
-<span id="circle-benchmark"></span><h2><span class="section-number">6.1. </span>Common Circle Benchmark<a class="headerlink" href="#common-circle-benchmark" title="Link to this heading">#</a></h2>
+<span id="circle-benchmark"></span><h2><span class="section-number">6.1. </span>Common circle benchmark<a class="headerlink" href="#common-circle-benchmark" title="Link to this heading">#</a></h2>
 <p>The three circle notebooks change the compactification but keep the physical problem fixed. The obstacle is the unit disk, <span class="math notranslate nohighlight">\(k=6\)</span>, and the incident direction is <span class="math notranslate nohighlight">\(a=(1,0)\)</span>. Following the notation of <a class="reference internal" href="exterior_scattering.html#exterior-scattering"><span class="std std-ref">Exterior Scattering Problem</span></a>, <span class="math notranslate nohighlight">\(U^{\rm inc}=e^{ikx}\)</span> is the incident field, <span class="math notranslate nohighlight">\(U\)</span> is the outgoing scattered field, <span class="math notranslate nohighlight">\(U^{\rm tot}=U^{\rm inc}+U\)</span> is the total field, and <span class="math notranslate nohighlight">\(U_\infty\)</span> is the far-field pattern. Lowercase <span class="math notranslate nohighlight">\(u\)</span> is reserved for a transformed finite-element unknown; the characteristic normalization is distinguished as <span class="math notranslate nohighlight">\(u_{\rm char}\)</span>.</p>
 <p>The notebooks use as reference the truncated Fourier–Bessel solution,</p>
 <div class="math notranslate nohighlight">
@@ -541,7 +541,7 @@ U_\infty^{(N)}(\theta)
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-circle-benchmark">6.1. Common Circle Benchmark</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#common-circle-benchmark">6.1. Common circle benchmark</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-domain-and-dg-examples">6.2. Time-domain and DG examples</a></li>
 </ul>
   </nav></div>

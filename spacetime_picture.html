@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>3. Spacetime Picture &#8212; Hyperboloidal compactification in NGSolve</title>
+    <title>3. Spacetime Picture &#8212; Hyperboloidal Compactification in NGSolve</title>
   
   
   
@@ -145,7 +145,7 @@
   
   
   
-    <p class="title logo__title">Hyperboloidal compactification in NGSolve</p>
+    <p class="title logo__title">Hyperboloidal Compactification in NGSolve</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -161,7 +161,7 @@
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    Hyperboloidal compactification in NGSolve
+                    Hyperboloidal Compactification in NGSolve
                 </a>
             </li>
         </ul>
@@ -372,8 +372,8 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-transformation">3.1. Time Transformation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conformal-infinity">3.2. Conformal Infinity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-transformation">3.1. Time transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conformal-infinity">3.2. Conformal infinity</a></li>
 </ul>
             </nav>
         </div>
@@ -406,7 +406,7 @@
 \]</div>
 <p>So we can consider the frequency-domain solution as the spatial part of a time-periodic wave. And here comes the connection to time transformations.</p>
 <section id="time-transformation">
-<h2><span class="section-number">3.1. </span>Time Transformation<a class="headerlink" href="#time-transformation" title="Link to this heading">#</a></h2>
+<h2><span class="section-number">3.1. </span>Time transformation<a class="headerlink" href="#time-transformation" title="Link to this heading">#</a></h2>
 <p>Introduce a new time coordinate <span class="math notranslate nohighlight">\(\tau\)</span> using a height function <span class="math notranslate nohighlight">\(h(r)\)</span> that only depends on the radius:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -423,7 +423,7 @@ t=\tau+h(r),
 <p>The highlighted quantity is the phase-transformed Helmholtz field. The regular unknown <span class="math notranslate nohighlight">\(u\)</span> used in the rest of the book also includes the conformal factor introduced below. Thus a complex exponential scaling of the Helmholtz unknown is equivalent to a time transformation in the wave equation. That’s the connection. To understand where the rest of the transformations come from, we must include a few pointers to mathematical relativity.</p>
 </section>
 <section id="conformal-infinity">
-<span id="id2"></span><h2><span class="section-number">3.2. </span>Conformal Infinity<a class="headerlink" href="#conformal-infinity" title="Link to this heading">#</a></h2>
+<span id="id2"></span><h2><span class="section-number">3.2. </span>Conformal infinity<a class="headerlink" href="#conformal-infinity" title="Link to this heading">#</a></h2>
 <p>What we’re doing in this method is to map infinity to the finite boundary of a computational domain. This is the same idea as the conformal compactification used in relativity. The method goes back to the concept of conformal infinity introduced by Penrose in 1963 in his work on <a class="reference external" href="https://doi.org/10.1103/PhysRevLett.10.66">asymptotic properties of spacetime</a>. Penrose demonstrated that infinity in relativity has a geometric structure inherited from the causal structure of spacetime. We have infinity along timelike directions, along spacelike directions, and along null directions. The latter is the relevant one for radiation problems because outgoing (scattered) waves propagate along characteristics to null infinity. Since the causal structure is preserved by conformal rescalings, Penrose could replace asymptotic analysis at infinity by local analysis at the conformal boundary where the conformal factor vanishes. The conformal boundary where outgoing radiation propagates to is called <em>future null infinity</em> and denoted by <span class="math notranslate nohighlight">\(\mathscr I^+\)</span>.</p>
 <p>This powerful tool was used heavily to study the large-scale structure of the universe and global properties of the Einstein equations. In particular, Friedrich proved the semi-global, <a class="reference external" href="https://link.springer.com/article/10.1007/BF01205488">nonlinear stability of Minkowski spacetime</a> by using a hyperboloidal initial-value formulation of Einstein’s equations, years before the celebrated global Christodoulou–Klainerman proof. At the dawn of numerical relativity, researchers tried to use conformal compactification to calculate gravitational waves from isolated systems (see <a class="reference external" href="https://doi.org/10.12942/lrr-2004-1">Frauendiener</a> for a review).</p>
 <p>Solving the Einstein equations numerically for generic gravitational waves including null infinity proved very difficult. This problem is still open. When a background metric is given, however, one can construct explicit hyperboloidal coordinates that map null infinity to a computational boundary, as demonstrated in <a class="reference external" href="https://arxiv.org/abs/0712.4333">Zenginoğlu</a>. This is the method that we are employing here for the Helmholtz equation.</p>
@@ -509,8 +509,8 @@ t=\tau+h(r),
   </div>
   <nav id="pst-page-toc-nav" class="page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-transformation">3.1. Time Transformation</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conformal-infinity">3.2. Conformal Infinity</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#time-transformation">3.1. Time transformation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conformal-infinity">3.2. Conformal infinity</a></li>
 </ul>
   </nav></div>
 

@@ -4,7 +4,7 @@
 We start with three implementations of sound-soft circle scattering: the characteristic scaling, Poincaré disk, and the hyperboloidal layer. The characteristic circle is the compactified analogue of the standard far-field scaling used by conjugated infinite elements. The Poincaré circle solves the Helmholtz equation in the hyperbolic geometry. The layer example shows how to preserve standard representation near the obstacle and transform only the exterior.
 
 (circle-benchmark)=
-## Common Circle Benchmark
+## Common circle benchmark
 
 The three circle notebooks change the compactification but keep the physical problem fixed. The obstacle is the unit disk, $k=6$, and the incident direction is $a=(1,0)$. Following the notation of {ref}`exterior-scattering`, $U^{\rm inc}=e^{ikx}$ is the incident field, $U$ is the outgoing scattered field, $U^{\rm tot}=U^{\rm inc}+U$ is the total field, and $U_\infty$ is the far-field pattern. Lowercase $u$ is reserved for a transformed finite-element unknown; the characteristic normalization is distinguished as $u_{\rm char}$.
 
