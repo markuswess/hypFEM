@@ -51,7 +51,7 @@ What we're doing in this method is to map infinity to the finite boundary of a c
 
 This powerful tool was used heavily to study the large-scale structure of the universe and global properties of the Einstein equations. In particular, Friedrich proved the semi-global, [nonlinear stability of Minkowski spacetime](https://link.springer.com/article/10.1007/BF01205488) by using a hyperboloidal initial-value formulation of Einstein's equations, years before the celebrated global Christodoulou–Klainerman proof. At the dawn of numerical relativity, researchers tried to use conformal compactification to calculate gravitational waves from isolated systems (see [Frauendiener](https://doi.org/10.12942/lrr-2004-1) for a review).
 
-To solve the Einstein equations numerically for generic gravitational waves including null infinity proved very difficult. This problem is still open. When a background metric is given, however, one can construct explicit hyperboloidal coordinates that map null infinity to a computational boundary, as demonstrated in [Zenginoğlu](https://arxiv.org/abs/0712.4333). This is the method that we are employing here for the Helmholtz equation.
+Solving the Einstein equations numerically for generic gravitational waves including null infinity proved very difficult. This problem is still open. When a background metric is given, however, one can construct explicit hyperboloidal coordinates that map null infinity to a computational boundary, as demonstrated in [Zenginoğlu](https://arxiv.org/abs/0712.4333). This is the method that we are employing here for the Helmholtz equation.
 
 The hyperboloidal compactification method consists of three steps. In our context, we can describe them as follows:
 
