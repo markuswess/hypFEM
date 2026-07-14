@@ -40,7 +40,7 @@ The timings are machine-dependent and exclude Python imports and kernel startup.
 
 ## Time-domain and DG examples
 
-The trapping-square notebooks use an open-cavity geometry to show radiation leaving through the compactified layer with trapped energy in the cavity. The frequency-domain notebook centers the cavity, whereas the two time-domain notebooks use a shifted cavity and mesh construction. The DG implementation imposes the sound-soft wall weakly and distinguishes the full conformal spatial flux from the skew skeleton coupling required by the mixed time-space derivative.
+The trapping-square notebooks use an open-cavity geometry to show radiation leaving through the compactified layer with trapped energy in the cavity. The frequency-domain notebook centers the cavity, whereas the time-domain notebooks use a shifted cavity and mesh construction. The implicit DG implementation uses a primal SIP form. The explicit DG notebook instead factors the conformal spatial energy into an adjoint central derivative, eliminates the auxiliary vector locally, and obtains a penalty-free positive stiffness. It uses an automatically audited RK4 step, exact element-block mass inverses, and a source-work/outflow energy balance.
 
 ```{contents}
 :local:

@@ -178,6 +178,7 @@
 <li class="toctree-l2"><a class="reference internal" href="examples/frequency_domain_trapping_square.html">Frequency Domain: Trapping Square</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/time_domain_trapping_square.html">Time Domain: Driven Trapping Square</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/time_domain_trapping_square_dg.html">Time Domain: Trapping Square with Discontinuous Galerkin</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/time_domain_trapping_square_explicit_dg.html">Explicit DG for the Trapping Square</a></li>
 </ul>
 </details></li>
 </ul>
@@ -461,7 +462,7 @@ U_\infty^{(N)}(\theta)
 </section>
 <section id="time-domain-and-dg-examples">
 <h2><span class="section-number">6.2. </span>Time-domain and DG examples<a class="headerlink" href="#time-domain-and-dg-examples" title="Link to this heading">#</a></h2>
-<p>The trapping-square notebooks use an open-cavity geometry to show radiation leaving through the compactified layer with trapped energy in the cavity. The frequency-domain notebook centers the cavity, whereas the two time-domain notebooks use a shifted cavity and mesh construction. The DG implementation imposes the sound-soft wall weakly and distinguishes the full conformal spatial flux from the skew skeleton coupling required by the mixed time-space derivative.</p>
+<p>The trapping-square notebooks use an open-cavity geometry to show radiation leaving through the compactified layer with trapped energy in the cavity. The frequency-domain notebook centers the cavity, whereas the time-domain notebooks use a shifted cavity and mesh construction. The implicit DG implementation uses a primal SIP form. The explicit DG notebook instead factors the conformal spatial energy into an adjoint central derivative, eliminates the auxiliary vector locally, and obtains a penalty-free positive stiffness. It uses an automatically audited RK4 step, exact element-block mass inverses, and a source-work/outflow energy balance.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="examples/frequency_domain_characteristic_circle.html">Frequency Domain: Characteristic Compactification of a Sound-Soft Circle</a></li>
@@ -470,6 +471,7 @@ U_\infty^{(N)}(\theta)
 <li class="toctree-l1"><a class="reference internal" href="examples/frequency_domain_trapping_square.html">Frequency Domain: Trapping Square</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/time_domain_trapping_square.html">Time Domain: Driven Trapping Square</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples/time_domain_trapping_square_dg.html">Time Domain: Trapping Square with Discontinuous Galerkin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/time_domain_trapping_square_explicit_dg.html">Explicit DG for the Trapping Square</a></li>
 </ul>
 </div>
 </section>
