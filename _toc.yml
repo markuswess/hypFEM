@@ -20,6 +20,7 @@ chapters:
       - file: examples/frequency_domain_trapping_square
       - file: examples/time_domain_trapping_square
       - file: examples/time_domain_trapping_square_dg
+      - file: examples/time_domain_trapping_square_explicit_dg
       #- file: examples/time_domain_1d
       #- file: examples/td_2d_2o
       #- file: examples/td_2d_1o
